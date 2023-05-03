@@ -7,6 +7,108 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Hello World</h1>
+    <div>
+      <h1>Boston House Price Prediction</h1>
+
+      <form action="{{url_for('predict')}}" method="post">
+        <input
+          type="text"
+          name="CRIM"
+          placeholder="CRIM"
+          required="required"
+          id=""
+        /><br />
+        <input
+          type="text"
+          name="ZN"
+          placeholder="ZN"
+          required="required"
+          id=""
+        /><br />
+        <input
+          type="text"
+          name="INDUS"
+          placeholder="INDUS"
+          required="required"
+          id=""
+        /><br />
+        <input
+          type="text"
+          name="CHAS"
+          placeholder="CHAS"
+          required="required"
+          id=""
+        /><br />
+        <input
+          type="text"
+          name="NOX"
+          placeholder="NOX"
+          required="required"
+          id=""
+        /><br />
+        <input
+          type="text"
+          name="RM"
+          placeholder="RM"
+          required="required"
+          id=""
+        /><br />
+        <input
+          type="text"
+          name="AGE"
+          placeholder="AGE"
+          required="required"
+          id=""
+        /><br />
+        <input
+          type="text"
+          name="DIS"
+          placeholder="DIS"
+          required="required"
+          id=""
+        /><br />
+        <input
+          type="text"
+          name="RAD"
+          placeholder="RAD"
+          required="required"
+          id=""
+        /><br />
+        <input
+          type="text"
+          name="TAX"
+          placeholder="TAX"
+          required="required"
+          id=""
+        /><br />
+        <input
+          type="text"
+          name="PTRATIO"
+          placeholder="PTRATIO"
+          required="required"
+          id=""
+        /><br />
+        <input
+          type="text"
+          name="B"
+          placeholder="B"
+          required="required"
+          id=""
+        /><br />
+        <input
+          type="text"
+          name="LSTAT"
+          placeholder="LSTAT"
+          required="required"
+          id=""
+        /><br />
+
+        <button type="submit">Predict</button>
+      </form>
+
+      <br />
+    </div>
+
+    {{prediction_text}}
   </body>
 </html>
