@@ -4,112 +4,205 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
     <title>Boston House Price Prediction</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <div>
-      <h1>Boston House Price Prediction</h1>
+  <body class="bg-gray-100">
+    <div class="max-w-lg mx-auto p-6 bg-white rounded-md shadow-md">
+      <h1 class="text-2xl font-bold mb-6">Boston House Price Prediction</h1>
 
       <form action="{{url_for('predict')}}" method="post">
-        <input
-          type="text"
-          name="CRIM"
-          placeholder="CRIM"
-          required="required"
-          id=""
-        /><br />
-        <input
-          type="text"
-          name="ZN"
-          placeholder="ZN"
-          required="required"
-          id=""
-        /><br />
-        <input
-          type="text"
-          name="INDUS"
-          placeholder="INDUS"
-          required="required"
-          id=""
-        /><br />
-        <input
-          type="text"
-          name="CHAS"
-          placeholder="CHAS"
-          required="required"
-          id=""
-        /><br />
-        <input
-          type="text"
-          name="NOX"
-          placeholder="NOX"
-          required="required"
-          id=""
-        /><br />
-        <input
-          type="text"
-          name="RM"
-          placeholder="RM"
-          required="required"
-          id=""
-        /><br />
-        <input
-          type="text"
-          name="AGE"
-          placeholder="AGE"
-          required="required"
-          id=""
-        /><br />
-        <input
-          type="text"
-          name="DIS"
-          placeholder="DIS"
-          required="required"
-          id=""
-        /><br />
-        <input
-          type="text"
-          name="RAD"
-          placeholder="RAD"
-          required="required"
-          id=""
-        /><br />
-        <input
-          type="text"
-          name="TAX"
-          placeholder="TAX"
-          required="required"
-          id=""
-        /><br />
-        <input
-          type="text"
-          name="PTRATIO"
-          placeholder="PTRATIO"
-          required="required"
-          id=""
-        /><br />
-        <input
-          type="text"
-          name="B"
-          placeholder="B"
-          required="required"
-          id=""
-        /><br />
-        <input
-          type="text"
-          name="LSTAT"
-          placeholder="LSTAT"
-          required="required"
-          id=""
-        /><br />
+        <div class="mb-4">
+          <label class="text-gray-700 font-bold mb-2" for="CRIM">CRIM </label>
+          <p class="text-gray-700 mb-2">per capita crime rate by town</p>
+          <input
+            type="text"
+            name="CRIM"
+            id="CRIM"
+            class="border rounded-md py-2 px-3 text-gray-700 w-full"
+            placeholder="0 - 100"
+            required="required"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="text-gray-700 font-bold mb-2" for="ZN">ZN </label>
+          <p class="text-gray-700 mb-2">
+            proportion of residential land zoned for lots over 25,000 sq.ft.
+          </p>
+          <input
+            type="text"
+            name="ZN"
+            id="ZN"
+            class="border rounded-md py-2 px-3 text-gray-700 w-full"
+            placeholder="0 - 100"
+            required="required"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="text-gray-700 font-bold mb-2" for="INDUS">INDUS </label>
+          <p class="text-gray-700 mb-2">
+            proportion of non-retail business acres per town
+          </p>
+          <input
+            type="text"
+            name="INDUS"
+            id="INDUS"
+            class="border rounded-md py-2 px-3 text-gray-700 w-full"
+            placeholder="0 - 100"
+            required="required"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="text-gray-700 font-bold mb-2" for="CHAS">CHAS </label>
+          <p class="text-gray-700 mb-2">
+            Charles River dummy variable; 1 if tract bounds river, 0 otherwise
+          </p>
+          <input
+            type="text"
+            name="CHAS"
+            id="CHAS"
+            class="border rounded-md py-2 px-3 text-gray-700 w-full"
+            placeholder="0 or 1"
+            required="required"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="text-gray-700 font-bold mb-2" for="NOX">NOX</label>
+          <p class="text-gray-700 mb-2">
+            nitric oxides concentration (parts per 10 million)
+          </p>
+          <input
+            type="text"
+            name="NOX"
+            id="NOX"
+            class="border rounded-md py-2 px-3 text-gray-700 w-full"
+            placeholder="0.00 - 1.00"
+            required="required"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="text-gray-700 font-bold mb-2" for="RM">RM </label>
+          <p class="text-gray-700 mb-2">average number of rooms per dwelling</p>
+          <input
+            type="text"
+            name="RM"
+            id="RM"
+            class="border rounded-md py-2 px-3 text-gray-700 w-full"
+            placeholder="2 - 10"
+            required="required"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="text-gray-700 font-bold mb-2" for="AGE">AGE </label>
+          <p class="text-gray-700 mb-2">
+            proportion of owner-occupied units built prior to 1940
+          </p>
+          <input
+            type="text"
+            name="AGE"
+            id="AGE"
+            class="border rounded-md py-2 px-3 text-gray-700 w-full"
+            placeholder="1 - 100"
+            required="required"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="text-gray-700 font-bold mb-2" for="DIS">DIS </label>
+          <p class="text-gray-700 mb-2">
+            weighted distances to five Boston employment centres
+          </p>
+          <input
+            type="text"
+            name="DIS"
+            id="DIS"
+            class="border rounded-md py-2 px-3 text-gray-700 w-full"
+            placeholder="1 - 25"
+            required="required"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="text-gray-700 font-bold mb-2" for="RAD">RAD </label>
+          <p class="text-gray-700 mb-2">
+            index of accessibility to radial highways
+          </p>
+          <input
+            type="text"
+            name="RAD"
+            id="RAD"
+            class="border rounded-md py-2 px-3 text-gray-700 w-full"
+            placeholder="1 - 100"
+            required="required"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="text-gray-700 font-bold mb-2" for="TAX">TAX </label>
+          <p class="text-gray-700 mb-2">
+            full-value property-tax rate per $10,000
+          </p>
+          <input
+            type="text"
+            name="TAX"
+            id="TAX"
+            class="border rounded-md py-2 px-3 text-gray-700 w-full"
+            placeholder="100 - 1000"
+            required="required"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="text-gray-700 font-bold mb-2" for="PTRATIO"
+            >PTRATIO
+          </label>
+          <p class="text-gray-700 mb-2">pupil-teacher ratio by town</p>
+          <input
+            type="text"
+            name="PTRATIO"
+            id="PTRATIO"
+            class="border rounded-md py-2 px-3 text-gray-700 w-full"
+            placeholder="10 - 25"
+            required="required"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="text-gray-700 font-bold mb-2" for="B">B </label>
+          <p class="text-gray-700 mb-2">
+            1000(Bk - 0.63)^2, Bk is the proportion of black people by town
+          </p>
+          <input
+            type="text"
+            name="B"
+            id="B"
+            class="border rounded-md py-2 px-3 text-gray-700 w-full"
+            placeholder="0 - 500"
+            required="required"
+          />
+        </div>
+        <div class="mb-4">
+          <label class="text-gray-700 font-bold mb-2" for="LSTAT">LSTAT </label>
+          <p class="text-gray-700 mb-2">% lower status of the population</p>
+          <input
+            type="text"
+            name="LSTAT"
+            id="LSTAT"
+            class="border rounded-md py-2 px-3 text-gray-700 w-full"
+            placeholder="1 - 100"
+            required="required"
+          />
+        </div>
 
-        <button type="submit">Predict</button>
+        <button
+          type="submit"
+          class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
+        >
+          Predict
+        </button>
       </form>
 
       <br />
-    </div>
 
-    {{prediction_text}}
+      <div class="text-2xl font-bold mb-6">{{prediction_text}}</div>
+    </div>
   </body>
 </html>
